@@ -78,7 +78,8 @@ def main():
                 st.session_state.logged_in = True
                 st.success("Login successful. Redirecting to the home page...")
                 # Redirect to the home page
-                subprocess.Popen(["streamlit", "run", "Home.py"])
+                # subprocess.Popen(["streamlit", "run", "Home.py"])
+                st.switch_page("pages/Home.py")
                 st.markdown(close_tab_js, unsafe_allow_html=True)
                 st.markdown("<script>closeTab()</script>", unsafe_allow_html=True)
             else:
