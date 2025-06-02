@@ -4,8 +4,9 @@ import subprocess
 
 if st.sidebar.button("Logout"):
         # Clear session state and reload login page
-        subprocess.Popen(["streamlit", "run", "login.py"], shell=True)
-        st.experimental_rerun()
+        # subprocess.Popen(["streamlit", "run", "login.py"], shell=True)
+        st.switch_page("login.py")
+        st.rerun()
 
 def main():
     st.subheader("Disease Prediction and Drug Recommendation System", anchor=False, divider="rainbow")
